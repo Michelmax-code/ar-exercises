@@ -20,7 +20,7 @@ yaletown = Store.create(name: "Yaletown", annual_revenue: 430000, mens_apparel: 
 #loop through each, puts name and annual revenue
 @mens_stores.each { |store| puts store.name, store.annual_revenue }
 
-#4.4 select stores with womens_apparel = true and annual_revenue < 1000000
+#select stores with womens_apparel = true and annual_revenue < 1000000
 less_store = Store.where(mens_apparel: false).where(womens_apparel: true).where("annual_revenue < 1000000")
 
 less_store.each do |store|
